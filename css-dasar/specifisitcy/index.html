@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Specificity</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Memahami Konsep Specificity di CSS</h1>
+
+    <p>
+      Specificity adalah konsep penting dalam CSS yang menentukan aturan mana
+      yang "menang" saat ada konflik antar selektor.
+    </p>
+
+    <h2>Apa Itu Specificity?</h2>
+    <p>
+      Setiap selektor memiliki tingkat kekhususan berbeda. Specificity membantu
+      browser menentukan aturan mana yang diterapkan jika ada lebih dari satu
+      aturan yang tersedia dan menyebabkan konflik.
+    </p>
+
+    <ul>
+      <li>Selektor elemen: <code>p</code> → bobot 1</li>
+      <li>Selektor class: <code>.judul</code> → bobot 10</li>
+      <li>Selektor ID: <code>#konten</code> → bobot 100</li>
+    </ul>
+
+    <div class="example">
+      <h2>Studi Kasus #1: Selektor Sama</h2>
+      <p>Contoh:</p>
+      <pre><code>&lt;p&gt;Ini paragraf&lt;/p&gt;</code></pre>
+      <pre><code>p {
+  color: red;
+}
+
+p {
+  color: green;
+}</code></pre>
+      <p>
+        Warna akhirnya <strong>hijau</strong>, karena selektor sama dan yang
+        terakhir diterapkan.
+      </p>
+    </div>
+
+    <div class="example">
+      <h2>Studi Kasus #2: ID vs Elemen</h2>
+      <pre><code>&lt;p id="p1"&gt;Ini paragraf&lt;/p&gt;</code></pre>
+      <pre><code>#p1 {
+  color: red;
+}
+
+p {
+  color: green;
+}</code></pre>
+      <p>
+        Warna akhirnya <strong>merah</strong>, karena ID (bobot 100) lebih
+        spesifik daripada elemen (bobot 1).
+      </p>
+    </div>
+
+    <div class="example">
+      <h2>Cara Menghitung Specificity</h2>
+      <p>Menggunakan format: <code>inline | ID | class | element</code></p>
+      <ul>
+        <li>Inline style → 1000</li>
+        <li>ID → 100</li>
+        <li>Class / pseudo-class → 10</li>
+        <li>Element → 1</li>
+      </ul>
+
+      <p>Contoh perbandingan:</p>
+      <pre><code>ul#sarapan li { color: green; } → 1 ID + 2 elemen = 0-1-0-2 = 102
+.favorit { color: red; } → 1 class = 0-0-1-0 = 10</code></pre>
+      <p>
+        Yang menang adalah <strong>ul#sarapan li</strong> karena lebih spesifik
+        (102 > 10)
+      </p>
+    </div>
+
+    <div class="example">
+      <h2>Studi Kasus #3: Kombinasi Selektor</h2>
+      <pre><code>&lt;ul id="sarapan"&gt;
+  &lt;li class="favorit"&gt;Nasi Goreng&lt;/li&gt;
+  &lt;li&gt;Mie Goreng&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+      <pre><code>ul#sarapan li {
+  color: green;
+}
+
+.favorit {
+  color: red;
+}</code></pre>
+
+      <p>
+        Warna <strong>Nasi Goreng</strong> adalah <strong>hijau</strong>,
+        karena:
+      </p>
+      <ul>
+        <li><code>ul#sarapan li</code> = 102</li>
+        <li><code>.favorit</code> = 10</li>
+      </ul>
+
+      <p>Jika ingin tetap merah, gunakan selektor yang lebih spesifik:</p>
+      <pre><code>ul#sarapan .favorit {
+  color: red;
+}</code></pre>
+
+      <p>
+        Sekarang specificity-nya adalah 112, dan aturan merah yang diterapkan.
+      </p>
+    </div>
+  </body>
+</html>

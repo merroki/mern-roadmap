@@ -1,0 +1,67 @@
+/* Warna dasar lebih terang dan segar */
+body {
+  font-family: Arial, sans-serif;
+  color: #333333;
+  background-color: #ffffff;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+/* Judul lebih mencolok */
+h1 {
+  font-size: 2rem;
+  color: #0d47a1;
+}
+
+h2 {
+  color: #1565c0;
+  margin-top: 2rem;
+}
+
+pre {
+  background-color: #f0f8ff;
+  padding: 1rem;
+  border-left: 4px solid #64b5f6;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+/* Link yang mewarisi warna */
+a {
+  /* color: inherit; */
+  text-decoration: underline dotted;
+}
+
+/* Box peringatan dengan tema kuning cerah */
+.note {
+  background-color: #fffde7;
+  border-left: 6px solid #fff176;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* Box contoh */
+.example {
+  background-color: #e3f2fd;
+  padding: 1rem;
+  border: 1px solid #90caf9;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+/* Styling elemen code inline */
+code {
+  background-color: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: Consolas, monospace;
+}
+
+.kesimpulan {
+  padding: 0;
+  list-style: decimal;
+}
+
+.kesimpulan li {
+  margin-left: 20px;
+}

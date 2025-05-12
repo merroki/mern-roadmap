@@ -1,0 +1,69 @@
+/* ============================
+   1. Background Color
+   ============================ 
+   Mengatur warna latar belakang elemen. Dapat menggunakan:
+   - Nama warna (predefined color)
+   - Nilai RGB
+   - Nilai Hexadecimal
+   - Nilai HSL
+*/
+body {
+  background-color: antiquewhite;
+  background-color: rgb(22, 32, 34);
+  background-color: #343434;
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* ============================
+   2. Background Image
+   ============================ 
+   Menambahkan gambar sebagai latar belakang.
+   Secara default, gambar akan diulang (repeat) secara horizontal dan vertikal.
+*/
+body {
+  background-image: url(images/pattern.png);
+}
+
+/* ============================
+   3. Background Repeat
+   ============================ 
+   Mengatur pengulangan gambar latar belakang:
+   - repeat       → (default) diulang di kedua arah.
+   - repeat-x     → hanya horizontal.
+   - repeat-y     → hanya vertikal.
+   - no-repeat    → gambar hanya muncul sekali.
+*/
+body {
+  background-repeat: repeat;
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-repeat: no-repeat;
+}
+
+/* ============================
+   4. Background Position
+   ============================ 
+   Menentukan posisi gambar latar jika tidak diulang (no-repeat).
+   Kombinasi nilai horizontal dan vertikal:
+   - Horizontal: left, center, right
+   - Vertikal: top, center, bottom
+*/
+body {
+  background-image: url(images/pattern.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* ============================
+   5. Shorthand Background Styling
+   ============================ 
+   Cara singkat untuk menuliskan semua properti background sekaligus.
+   Urutan penulisannya:
+   1. background-color
+   2. background-image
+   3. background-repeat
+   4. background-position
+*/
+body {
+  background: rgb(228, 120, 120) url(images/pattern.png) no-repeat top center;
+}

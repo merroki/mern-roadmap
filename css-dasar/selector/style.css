@@ -1,0 +1,95 @@
+/* ============================
+   1. Universal Selector
+   ============================ 
+   Menargetkan semua elemen HTML tanpa terkecuali.
+   Umumnya digunakan untuk reset CSS atau pengujian awal.
+*/
+/* * {
+  border: 1px solid blue;
+} */
+
+/* ============================
+   2. Element Selector
+   ============================ 
+   Menargetkan elemen HTML berdasarkan nama tag-nya.
+*/
+body {
+  color: rgb(118, 118, 17);
+}
+
+h1 {
+  font-size: 42px;
+}
+
+/* ============================
+   3. Class Selector
+   ============================ 
+   Menargetkan elemen yang memiliki atribut class tertentu.
+   Class diawali dengan tanda titik (.)
+*/
+.p1 {
+  color: brown;
+  font-size: 24px;
+}
+
+/* ============================
+   4. ID Selector
+   ============================ 
+   Menargetkan elemen yang memiliki atribut id tertentu.
+   ID diawali dengan tanda pagar (#)
+*/
+#p2 {
+  color: darkolivegreen;
+  font-weight: bold;
+}
+
+/* ============================
+   5. Attribute Selector
+   ============================ 
+   Menargetkan elemen berdasarkan atribut HTML-nya.
+*/
+
+/* Elemen yang memiliki atribut tertentu */
+[placeholder] {
+  border: 1px solid blue;
+}
+
+/* Elemen yang memiliki atribut dengan nilai tertentu */
+[type="text"] {
+  background-color: rgba(30, 4, 61, 0.62);
+}
+
+[type="password"] {
+  background-color: lightgray;
+}
+
+/* Elemen dengan salah satu nilai atribut mengandung kata tertentu (dipisahkan spasi) */
+[class~="danger"] {
+  color: orange;
+}
+[class~="danger"] {
+  color: rgb(255, 4, 0);
+}
+
+/* Elemen dengan atribut yang bernilai tepat atau diawali dengan nilai diikuti tanda hubung (-) */
+[class|="lol"] {
+  font-style: italic;
+  color: chocolate;
+}
+
+/* Elemen dengan atribut yang nilainya diawali dengan string tertentu */
+[href^="https"] {
+  color: rgb(0, 24, 70);
+  font-weight: bold;
+}
+
+/* Elemen dengan atribut yang nilainya diakhiri dengan string tertentu */
+[href$="sg"] {
+  color: rgb(7, 255, 78);
+  font-weight: bold;
+}
+
+/* Elemen dengan atribut yang nilainya mengandung substring tertentu */
+[href*="ex33ample"] {
+  font-size: 42px;
+}

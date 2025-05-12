@@ -1,0 +1,72 @@
+/* ============================
+   5. Pseudo-class Selector
+   ============================ 
+   Digunakan untuk menargetkan elemen berdasarkan keadaan tertentu 
+   seperti status interaksi atau posisi elemen di dalam parent.
+*/
+
+/* ------------------------------------
+   Pseudo-class untuk LINK INTERACTION
+   ------------------------------------
+   1. :link    → link default (belum diklik)
+   2. :hover   → saat mouse diarahkan
+   3. :active  → saat link sedang diklik
+   4. :visited → link yang sudah dikunjungi
+*/
+
+.ytb:link {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(163, 38, 163);
+  transition: 0.3s all;
+}
+
+.ytb:hover {
+  color: rgb(82, 17, 82);
+  text-decoration: underline;
+}
+
+.ytb:active {
+  text-decoration: none;
+  border: 1px solid blue;
+}
+
+.ytb:visited {
+  color: gray;
+}
+
+/* ------------------------------------
+   Pseudo-class untuk CHILD POSITION
+   ------------------------------------
+   Digunakan untuk menargetkan elemen berdasarkan urutannya di dalam parent.
+   - :first-child      → anak pertama
+   - :last-child       → anak terakhir
+   - :nth-child(n)     → anak ke-n
+   - :nth-child(odd)   → anak ganjil (1, 3, 5, ...)
+   - :nth-child(even)  → anak genap (2, 4, 6, ...)
+*/
+
+li:first-child a {
+  color: rgb(255, 0, 0); /* Merah untuk link pertama */
+}
+
+li:last-child a {
+  color: rgb(0, 0, 0); /* Hitam untuk link terakhir */
+}
+
+li:nth-child(3) a {
+  color: rgb(0, 81, 128); /* Biru tua untuk link ke-3 */
+}
+
+li:nth-child(2n) a {
+  color: green; /* Hijau untuk elemen ke-2, 4, 6, dst. */
+}
+
+li:nth-child(odd) a:hover {
+  color: red; /* Merah saat hover elemen ganjil */
+}
+
+li:nth-child(even) a:hover {
+  color: gold; /* Emas saat hover elemen genap */
+}

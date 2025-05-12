@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contoh External CSS</title>
+    <!-- ============================
+     1. External CSS
+     ============================ 
+     File CSS terpisah yang dihubungkan melalui tag <link>.
+     Digunakan untuk styling yang konsisten di banyak halaman.
+    -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- ============================
+     2. Embedded CSS
+     ============================ 
+     CSS ditulis langsung di dalam tag <style> di bagian <head>.
+     Digunakan jika styling hanya berlaku di satu halaman saja.
+    -->
+    <style>
+      h1 {
+        color: lightblue;
+        font-family: Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ============================
+     3. Inline CSS
+     ============================ 
+     CSS ditulis langsung di atribut `style` pada elemen HTML.
+     Biasanya digunakan untuk styling cepat atau khusus satu elemen.
+    -->
+    <h1 style="color: lightblue; font-family: Arial">Judul</h1>
+    <h1>Judul Besar</h1>
+    <p>Paragraf contoh.</p>
+  </body>
+</html>

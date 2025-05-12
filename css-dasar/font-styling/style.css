@@ -1,0 +1,54 @@
+/* ============================
+   1. Font Family (Jenis Huruf)
+   ============================ 
+*/
+/*
+   Digunakan untuk menentukan jenis huruf yang akan digunakan pada halaman.
+   Jika jenis huruf pertama tidak tersedia, akan digunakan jenis huruf berikutnya sebagai cadangan.
+*/
+body {
+  font-family: "Hack", Arial, Verdana, sans-serif;
+}
+
+/* ============================
+   2. Font Size & Font Variant
+   ============================ 
+   - font-size: Mengatur ukuran teks.
+   - font-variant: Membuat huruf kecil tampil seperti huruf kapital kecil.
+*/
+h3 {
+  font-size: 24px;
+  font-variant: small-caps;
+}
+
+/* ============================
+   3. Font Style, Font Weight, & Line Height
+   ============================ 
+   - font-style: Membuat teks menjadi miring (italic).
+   - font-weight: Membuat teks menjadi tebal (bold).
+   - line-height: Mengatur jarak antar baris agar lebih nyaman dibaca.
+*/
+p {
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* ============================
+   4. Shorthand Font (Opsional)
+   ============================ 
+   Cara singkat untuk menuliskan semua properti font sekaligus dalam satu baris.
+   Urutan penulisannya:
+   1. font-style
+   2. font-variant
+   3. font-weight
+   4. font-size / line-height
+   5. font-family
+
+   CATATAN:
+   Jika menggunakan ini, maka semua pengaturan font sebelumnya akan ditimpa.
+*/
+/* 
+p {
+  font: italic small-caps bold 32px/1.5 Arial, sans-serif;
+} */

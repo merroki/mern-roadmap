@@ -1,0 +1,81 @@
+/* ============================
+   1. Warna Teks (Color)
+   ============================ 
+   Digunakan untuk mengatur warna pada teks.
+   CSS mendukung beberapa format warna:
+   - Nama warna bawaan (predefined color)
+   - Kode warna hexadecimal
+   - RGB (Red, Green, Blue)
+   - HSL (Hue, Saturation, Lightness)
+*/
+h1 {
+  /* Nama warna bawaan */
+  color: antiquewhite;
+
+  /* Warna dalam format hexadecimal */
+  color: #593003;
+
+  /* Warna dalam format RGB */
+  color: rgb(31, 223, 122);
+
+  /* Warna dalam format HSL */
+  color: hsl(184, 88%, 53%);
+}
+
+/* ============================
+   2. Perataan Teks (Text Align)
+   ============================ 
+   Digunakan untuk mengatur perataan horizontal teks.
+   Nilai yang didukung: left, right, center, justify.
+*/
+p {
+  font-size: 53px;
+  text-align: justify;
+}
+
+/* ============================
+   3. Indentasi Teks (Text Indent)
+   ============================ 
+   Digunakan untuk memberikan jarak masuk (indentasi) pada baris pertama paragraf.
+*/
+p {
+  text-indent: 100px;
+}
+
+/* ============================
+   4. Dekorasi Teks (Text Decoration)
+   ============================ 
+   Digunakan untuk menambahkan garis pada teks.
+   Nilai yang didukung: underline, overline, line-through, none.
+*/
+p {
+  text-decoration: underline;
+}
+
+/* ============================
+   5. Transformasi Teks (Text Transform)
+   ============================ 
+   Digunakan untuk mengubah bentuk huruf dalam teks.
+   Nilai yang didukung: uppercase, lowercase, capitalize.
+*/
+p {
+  text-transform: uppercase;
+}
+
+/* ============================
+   6. Jarak Antar Huruf (Letter Spacing)
+   ============================ 
+   Digunakan untuk mengatur jarak antar huruf dalam sebuah kata.
+*/
+p {
+  letter-spacing: 2px;
+}
+
+/* ============================
+   7. Jarak Antar Kata (Word Spacing)
+   ============================ 
+   Digunakan untuk mengatur jarak antar kata dalam sebuah kalimat.
+*/
+p {
+  word-spacing: 30px;
+}

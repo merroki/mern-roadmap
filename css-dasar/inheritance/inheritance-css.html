@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pewarisan di CSS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Pewarisan (Inheritance) di CSS 🧬</h1>
+    <p>
+      Pewarisan di CSS adalah konsep di mana elemen HTML bisa mewarisi beberapa
+      nilai properti dari elemen induknya (parent).
+    </p>
+
+    <div class="note">
+      ⚠️ Tidak semua properti diwariskan secara otomatis! Beberapa properti
+      harus disetel secara manual menggunakan <code>inherit</code>.
+    </div>
+
+    <h2>Apa yang Bisa Diwariskan?</h2>
+    <p>Contoh properti yang umum diwariskan:</p>
+    <ul>
+      <li><code>color</code></li>
+      <li><code>font-family</code></li>
+      <li><code>letter-spacing</code></li>
+      <li><code>line-height</code></li>
+      <li><code>visibility</code></li>
+    </ul>
+
+    <h2>Contoh Kasus: Warna pada Elemen <code>&lt;a&gt;</code></h2>
+    <p>Struktur HTML:</p>
+    <pre><code>&lt;body&gt;
+  &lt;h1&gt;Judul Halaman&lt;/h1&gt;
+  &lt;a href="#"&gt;Ini link&lt;/a&gt;
+  &lt;p&gt;Ini paragraf&lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+
+    <p>CSS awal:</p>
+    <pre><code>body {
+  font-family: Arial;
+  color: darkgray;
+}</code></pre>
+
+    <div class="example">
+      <h1>Judul Halaman</h1>
+      <a href="#">Ini link</a>
+      <p>Ini paragraf</p>
+    </div>
+
+    <p>
+      Perhatikan bahwa teks link tetap berwarna biru secara default. Ini karena
+      <code>&lt;a&gt;</code> tidak mewarisi <code>color</code>.
+    </p>
+
+    <h2>Solusi: Gunakan <code>inherit</code></h2>
+    <p>Tambahkan CSS berikut agar link ikut mewarisi warna dari parent-nya:</p>
+    <pre><code>a {
+  color: inherit;
+}</code></pre>
+
+    <p>
+      Hasilnya, link kini mengikuti warna teks dari elemen
+      <code>&lt;body&gt;</code>.
+    </p>
+
+    <h2>Kesimpulan</h2>
+    <ul class="kesimpulan">
+      <li>Beberapa properti memang diwariskan secara default di CSS.</li>
+      <li>
+        Namun untuk properti seperti <code>color</code> pada
+        <code>&lt;a&gt;</code>, kita perlu menyetel <code>inherit</code> secara
+        eksplisit.
+      </li>
+      <li>
+        Ini membantu menjaga konsistensi tampilan ketika style induk berubah.
+      </li>
+    </ul>
+  </body>
+</html>
