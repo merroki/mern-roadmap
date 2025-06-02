@@ -1,0 +1,105 @@
+/* ============================
+   Margin dalam Box Model
+   ============================ 
+   Properti CSS `margin` digunakan untuk memberikan jarak luar (luar border) 
+   dari suatu elemen HTML terhadap elemen lainnya.
+
+   Properti ini mengatur ruang transparan di sekitar elemen, dan sangat berguna 
+   dalam mengatur layout halaman web.
+
+   Penulisan margin dapat menggunakan empat arah:
+   1. margin-top
+   2. margin-right
+   3. margin-bottom
+   4. margin-left
+
+   Nilai dari properti margin dapat berupa:
+   - Satuan absolut (px, cm, mm, dll)
+   - Satuan relatif (%)
+   - auto (untuk pemusatan/centering)
+   - nilai negatif (untuk menarik elemen ke arah berlawanan)
+ */
+.satu {
+  margin-left: 100px;
+  margin-top: 30px;
+  margin-bottom: 150px;
+  margin-right: 50px;
+}
+
+/* ============================
+   Overlapping Margin
+   ============================
+   Overlapping terjadi ketika dua elemen memiliki margin atas dan bawah yang
+   saling bersentuhan.
+
+   Pada kasus vertikal (atas dan bawah), margin tidak dijumlahkan.
+   Hanya nilai margin terbesar yang akan digunakan.
+
+   Contoh:
+   .satu  -> margin-bottom: 150px;
+   .dua   -> margin-top: 50px;
+   Maka jarak antar elemen = 150px (bukan 200px)
+
+   Pada margin horizontal (kiri dan kanan), nilai margin akan dijumlahkan.
+
+   Contoh:
+   .satu  -> margin-right: 30px;
+   .dua   -> margin-left: 20px;
+   Maka jarak antar elemen = 50px
+*/
+
+/* ============================
+   Margin Negatif
+   ============================
+   Nilai negatif pada margin dapat digunakan untuk menarik elemen ke arah
+   yang berlawanan.
+
+   Efek negatif dari margin yang diberikan nilai negatif
+   - Elemen bisa tumpang tindih
+   - Bisa keluar dari viewport
+*/
+.dua {
+  margin-top: -50px; /* Elemen .dua akan naik */
+  margin-left: -20px; /* Elemen .dua akan bergeser ke kiri */
+}
+
+/* ============================
+   Margin Auto
+   ============================
+   Nilai `auto` pada margin biasa digunakan untuk memusatkan atau centering
+   elemen secara horizontal.
+
+   Syarat:
+   - Elemen harus block-level
+   - Harus memiliki lebar yang ditentukan
+
+   Contoh:
+*/
+.satu {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================
+   Shorthand Margin
+   ============================
+   Penulisan margin dapat disingkat (shorthand) dalam satu baris kode.
+   Format margin: atas kanan bawah kiri
+*/
+.tiga {
+  /* 
+    margin-top: 10px
+    margin-right: 20px
+    margin-bottom: 30px
+    margin-left: 40px 
+  */
+  margin: 10px 20px 30px 40px;
+
+  /* 
+    Jika hanya menuliskan dua nilai:
+    margin-top & bottom = 20px
+    margin-left & right = auto (tengah)
+  */
+  margin: 20px auto;
+}

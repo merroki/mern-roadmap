@@ -1,0 +1,40 @@
+/* ============================
+   Padding dalam CSS
+   ============================ 
+   Padding adalah ruang transparan antara konten elemen dan border-nya.
+   Padding berfungsi untuk menjauhkan konten dari tepi kotak elemen,
+   menciptakan ruang di dalam elemen.
+
+   Padding dapat dituliskan dengan dua cara:
+   1. Properti per sisi:
+      padding-top: 20px;
+      padding-right: 15px;
+      padding-bottom: 10px;
+      padding-left: 5px;
+
+   2. Shorthand:
+      padding: 10px 15px 20px 25px; 
+      Atas | Kanan | Bawah | Kiri
+
+      Jika hanya dua nilai:
+      padding: 20px auto;
+      Atas & bawah = 20px, kiri & kanan = auto (tidak berlaku untuk padding) 
+
+   Catatan:
+   - Padding tidak bisa bernilai negatif.
+   - Padding tidak menerima nilai 'auto'.
+   - Padding menambah ukuran total kotak jika `box-sizing` adalah `content-box` (default).
+*/
+.padding-ex {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(150, 150, 217);
+  margin: auto;
+  padding: 20px 40px;
+  /*
+    Karena box-sizing: content-box (default), maka padding akan menambah ukuran kotak.
+    Ukuran awal: width 200px, height 200px
+    Setelah padding: width = 200 + 40 (kiri) + 40 (kanan) = 280px
+                     height = 200 + 20 (atas) + 20 (bawah) = 240px
+  */
+}

@@ -1,0 +1,28 @@
+/* ============================
+   Box Size dan Perhitungan
+   ============================ 
+   Total ukuran kotak ditentukan oleh:
+   - width & height (konten)
+   - padding
+   - border
+
+   Contoh perhitungan:
+     width: 200px;
+     padding: 20px;
+     border: 5px solid;
+
+     Total width = 5 (border kiri) + 20 (padding kiri) + 200 (konten)
+                  + 20 (padding kanan) + 5 (border kanan)
+                = 250px
+
+   Untuk menjaga ukuran kotak tetap 200px, gunakan:
+   | box-sizing: border-box; |
+   Dengan properti ini, padding dan border akan dihitung di dalam width dan height.
+*/
+.box-sizing-ex {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid gray;
+  box-sizing: border-box;
+  background-color: rgb(64, 64, 232);
+}

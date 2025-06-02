@@ -1,0 +1,147 @@
+/* ============================
+   CSS Float
+   ============================
+   Properti CSS `float` digunakan untuk membuat elemen "melayang" ke kiri atau kanan
+   dari elemen pembungkusnya, dan keluar dari alur tata letak normal (normal flow).
+
+   Properti ini sangat berguna saat ingin membuat:
+   - Layout sejajar horizontal
+   - Teks membungkus gambar
+   - Layout multi-kolom seperti majalah
+
+   Nilai dari Float:
+   - none  → (default) Elemen tetap mengikuti normal flow.
+   - left  → Elemen melayang ke sisi kiri container-nya.
+   - right → Elemen melayang ke sisi kanan container-nya.
+*/
+
+/* ============================
+   Normal Flow vs. Out of Flow
+   ============================
+
+   Normal Flow:
+   - Elemen block (seperti <div>) akan ditumpuk vertikal.
+   - Elemen inline (seperti <span>) akan berjajar horizontal.
+
+   Out of Flow:
+   - Ketika elemen di-float, ia keluar dari alur normal.
+   - Elemen lain akan memperlakukannya seolah-olah tidak ada.
+
+   Efek:
+   - Dapat menyebabkan elemen tumpang tindih atau naik ke atas.
+*/
+
+/* ============================
+   Contoh 1: Float Dasar
+   ============================ 
+   Ketika .box2 diberi float: left, maka .box3 akan naik ke atas dan
+   menimpa area .box2 karena ia mengabaikan elemen yang keluar dari normal flow.
+*/
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+.box1 {
+  background-color: salmon;
+}
+
+.box2 {
+  background-color: green;
+  float: left; /* Elemen .box2 melayang ke kiri */
+}
+
+.box3 {
+  background-color: blue;
+}
+
+/* ============================
+   Contoh 2: Dengan Container
+   ============================ 
+   Dengan float: left pada .box2, maka ia akan menempel ke kiri container.
+   .box3 akan naik ke atas karena .box2 keluar dari aliran normal.
+*/
+.container {
+  width: 600px;
+  margin: 40px auto;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+/* ============================
+   Contoh 3: Text Wrapping
+   ============================ 
+   Gambar dengan class .logo akan melayang ke kiri dan teks paragraf 
+   akan mengalir di sekitarnya. 
+   Untuk melayang ke kanan, gunakan float: right.
+*/
+.logo {
+  width: 20%;
+  height: 20%;
+  float: right;
+}
+
+/* ============================
+   Contoh 4: Galeri Sederhana
+   ============================ 
+   Setiap .gallery-box akan melayang ke kiri dan tampil sejajar,
+   membentuk layout galeri horizontal.
+*/
+.gallery-box {
+  width: 80px;
+  height: 80px;
+  background-color: navy;
+  color: white;
+  text-align: center;
+  line-height: 80px;
+  float: left;
+  margin: 5px;
+}
+
+/* ============================
+   Contoh 5: Multi-column layout
+   ============================ 
+   Layout dibagi menjadi 3 kolom: kiri, tengah, dan kanan. 
+   Masing-masing kolom di-float ke kiri agar sejajar.
+*/
+.container {
+  width: 800px;
+  margin: 160px auto;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.kiri {
+  width: 150px;
+  height: 500px;
+  background-color: aquamarine;
+  float: left;
+}
+
+.tengah {
+  width: 500px;
+  height: 500px;
+  background-color: rgb(127, 127, 255);
+  float: left;
+}
+
+.kanan {
+  width: 150px;
+  height: 500px;
+  background-color: rgb(255, 202, 127);
+  float: left;
+}
+
+/* ============================
+   Clearfix (Mengatasi Container Collapse)
+   ============================ 
+   Container akan runtuh jika seluruh anak elemennya diberi float. 
+   Solusi untuk mengatasinya adalah menggunakan teknik clearfix.
+*/
+.clear {
+  clear: both;
+}

@@ -1,0 +1,103 @@
+/* ============================
+   Non-Semantic Elements: div & span
+   ============================ 
+   <div> digunakan untuk mengelompokkan elemen besar seperti header, konten, footer.
+   <span> digunakan untuk bagian kecil dalam teks, bersifat inline.
+*/
+span.highlight {
+  color: red;
+}
+
+div.header,
+div.navigasi,
+div.main,
+div.copyright {
+  background-color: aqua;
+}
+
+/* ============================
+   Properti Display
+   ============================ 
+   Setiap elemen HTML memiliki properti display bawaan yang 
+   menentukan bagaimana elemen tersebut ditampilkan dalam layout.
+   Value umum yang digunakan:
+   1. inline
+   2. inline-block
+   3. block
+   4. none
+*/
+
+/* ============================
+   Display: inline
+   ============================ 
+   - Tidak memulai baris baru
+   - Lebar & tinggi hanya sebesar kontennya
+   - Tidak bisa diatur width & height-nya
+   - Margin dan padding hanya berpengaruh horizontal (kiri/kanan)
+   - <img> adalah pengecualian, meskipun inline, bisa diatur width & height
+*/
+.p1 span,
+ul.navigasi a {
+  /* 
+  Catatan: karena span dan a adalah elemen inline secara default,
+  properti width, height, margin-top, dan margin-bottom tidak akan berpengaruh
+  kecuali display-nya diubah 
+  */
+  color: rgb(249, 0, 0);
+  width: 200px;
+  height: 200px;
+  border: 1px solid blue;
+  margin: 100px 20px;
+}
+
+.img-inline {
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  border: 1px solid red;
+}
+
+/* ============================
+   Display: inline-block
+   ============================ 
+   - Tidak memulai baris baru
+   - Bisa mengatur width & height
+   - Bisa menerima margin & padding secara penuh (horizontal & vertikal)
+   - Kombinasi sifat inline dan block
+   - Beberapa elemen seperti <img>, <input>, <button> memiliki default inline-block
+*/
+ul.navigasi2 a {
+  display: inline-block;
+  color: blueviolet;
+  border: 2px solid blue;
+  width: 150px;
+  height: 50px;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* ============================
+   Display: block
+   ============================ 
+   - Secara default membuat baris baru
+   - Secara default mengisi seluruh lebar kontainernya
+   - Bisa diatur width, height, margin, padding
+   - Bisa berisi elemen block dan inline
+*/
+h1 {
+  background-color: aquamarine;
+  height: 50px;
+  margin: 10px;
+  padding: 10px;
+}
+
+/* ============================
+   Display: none
+   ============================ 
+   - Elemen tidak ditampilkan sama sekali dan tidak mempengaruhi layout
+   - Berbeda dengan visibility: hidden yang menyembunyikan elemen 
+     tetapi tetap mempertahankan ruangnya pada layout
+*/
+.display-none {
+  display: none;
+}

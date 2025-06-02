@@ -1,0 +1,49 @@
+/* ============================
+   Position dalam CSS
+   ============================ 
+   Properti `position` digunakan untuk mengatur bagaimana sebuah elemen
+   diposisikan di dalam halaman, baik relatif terhadap posisi normalnya
+   maupun terhadap elemen lain.
+
+   Nilai-nilai utama dari position:
+   - static     → posisi default (mengikuti alur dokumen)
+   - relative   → diposisikan relatif terhadap posisi aslinya
+   - absolute   → diposisikan relatif terhadap parent terdekat yang memiliki posisi selain static
+   - fixed      → diposisikan relatif terhadap viewport (tidak bergeser saat scroll)
+   - sticky     → seperti relative, tapi berubah jadi fixed saat melewati threshold scroll
+
+   Untuk `position` selain static, kita bisa menggunakan properti:
+   - top, right, bottom, left → untuk mengatur jarak dari sisi yang ditentukan
+
+   Catatan:
+   - Elemen dengan position `absolute` akan keluar dari alur normal dokumen.
+   - Elemen dengan `fixed` juga keluar dari alur normal, tapi posisinya tetap saat halaman di-scroll.
+   - Elemen `sticky` berguna untuk header yang ingin tetap di atas setelah scroll.
+*/
+body {
+  height: 2000px;
+}
+div {
+  width: 200px;
+  height: 200px;
+}
+.satu {
+  background-color: antiquewhite;
+}
+.dua {
+  background-color: gold;
+  /*
+    Elemen akan tetap berada di alur normal dokumen,
+    tapi dipindahkan 20px ke bawah dan 10px ke kanan
+    dari posisi asalnya (karena menggunakan relative).
+    
+    Ukuran dan layout elemen lain tidak terpengaruh karena
+    posisi aslinya masih dihitung dalam flow.
+  */
+  position: relative;
+  top: 20px;
+  left: 10px;
+}
+.tiga {
+  background-color: rebeccapurple;
+}

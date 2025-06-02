@@ -1,0 +1,40 @@
+/* ============================
+   Z-Index dan Layering Elemen Nonstatik
+   ============================ 
+   `z-index` mengatur urutan tumpukan elemen yang posisinya non-static 
+   (`relative`, `absolute`, atau `fixed`).
+
+   Penggunaan:
+   - Hanya berlaku pada elemen dengan `position` non-static.
+   - Nilainya berupa bilangan bulat, semakin besar, semakin di depan.
+   - Jika tidak diberi `z-index`, urutan tumpukan mengikuti urutan DOM 
+     (elemen terakhir tampil di atas).
+*/
+.zcontainer {
+  margin-top: 100px;
+  border: 5px solid black;
+  width: 1000px;
+  height: 600px;
+  position: relative;
+}
+
+.z1,
+.z2,
+.z3 {
+  position: absolute;
+}
+
+.z1 {
+  background-color: cadetblue;
+  z-index: 999;
+}
+.z2 {
+  background-color: brown;
+  top: 100px;
+  left: 100px;
+}
+.z3 {
+  background-color: palevioletred;
+  top: 200px;
+  left: 200px;
+}

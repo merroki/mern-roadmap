@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 
+    ============================ 
+    Struktur Dasar Website
+    ============================ 
+    Website sederhana biasanya terdiri dari  beberapa elemen utama: 
+    - Header      → bagian atas berisi judul dan navigasi. 
+    - Hero Image  → banner/gambar besar di bawah header. 
+    - Artikel     → konten utama berisi judul, metadata, dan paragraf. 
+    - Footer      → bagian bawah halaman sebagai penutup. 
+    
+    Semua elemen dibungkus ke dalam satu container untuk mengatur lebar maksimal 
+    halaman dan posisi yang konsisten (centered). 
+    -->
+
+    <div class="container">
+      <header class="header">
+        <h1 class="judul">My Website</h1>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Service</a></li>
+        </ul>
+      </header>
+
+      <div class="hero">
+        <img src="hero.png" alt="Hero Image" />
+      </div>
+
+      <article class="content">
+        <h2 class="article-title">Judul Artikel</h2>
+        <p class="meta">Ditulis oleh Admin pada 13 Mei 2025</p>
+        <p>
+          Ini adalah paragraf pertama dari isi artikel. Artikel ini menjelaskan
+          struktur dasar dari sebuah website.
+        </p>
+        <p>
+          Paragraf kedua menjelaskan bagaimana membuat layout dengan HTML dan
+          CSS sederhana.
+        </p>
+        <p>
+          Paragraf ketiga membahas bagaimana mengatur tampilan navigasi, judul,
+          dan banner agar tampil rapi.
+        </p>
+      </article>
+
+      <footer class="footer">
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+/* ============================
+   Box Model CSS (TEORI)
+   ============================ 
+   Merupakan konsep fundamental dalam CSS yang mendefinisikan 
+   bagaimana elemen web ditampilkan sebagai bentuk kotak. Setiap elemen 
+   memiliki area konten, padding, border, dan margin yang membentuk kotak tersebut.
+
+   Box Model CSS terdiri dari empat komponen utama:
+   1. Content: Isi dari elemen, bisa berupa teks, gambar, link, dsb
+   2. Padding: Ruang kosong antara konten dan border, berada di dalam border
+   3. Border: Garis tepi yang mengelilingi padding dan konten
+   4. Margin: Ruang kosong di luar border, memisahkan elemen dengan elemen lainnya
+
+   Catatan:
+   - Margin dan Padding bersifat transparan
+   - Border bisa diatur warnanya, tebalnya, dan jenis garisnya
+*/
+.satu {
+  width: 200px;
+  height: 200px;
+  background-color: lightgreen;
+}
+
+.dua {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+
+.tiga {
+  width: 50px;
+  height: 50px;
+  background-color: violet;
+}

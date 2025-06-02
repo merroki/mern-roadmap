@@ -1,0 +1,38 @@
+/* ============================
+   Border dalam CSS
+   ============================ 
+   Border adalah garis yang mengelilingi padding dan konten elemen.
+   Border berfungsi untuk membingkai elemen, dan dapat dikustomisasi dengan:
+   - border-width   → ketebalan garis
+   - border-style   → jenis garis
+   - border-color   → warna garis
+
+   Contoh penulisan shorthand:
+     border: 2px solid black;
+
+   Alternatif penulisan per properti:
+     border-width: 2px;
+     border-style: solid;
+     border-color: black;
+
+   Jenis nilai border-style yang tersedia:
+   - solid     → garis penuh
+   - dotted    → titik-titik
+   - dashed    → garis putus-putus
+   - double    → garis ganda
+   - none      → tanpa border
+
+   Sama seperti padding, border juga memengaruhi ukuran total kotak.
+*/
+.border-ex {
+  border: 5px dashed blue;
+  /*
+    Misalnya elemen memiliki width: 200px dan height: 200px,
+    lalu ditambahkan padding: 40px (kanan & kiri), 20px (atas & bawah),
+    maka ukuran menjadi: width = 280px, height = 240px.
+
+    Jika kemudian ditambahkan border 5px di semua sisi:
+    width = 280 + 5 (kiri) + 5 (kanan) = 290px
+    height = 240 + 5 (atas) + 5 (bawah) = 250px
+  */
+}

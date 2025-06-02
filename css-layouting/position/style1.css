@@ -1,0 +1,69 @@
+/* ============================
+   CSS Position: Absolute & Fixed
+   ============================ 
+   Properti `position` mengatur bagaimana elemen ditempatkan dalam dokumen. 
+   Selain `static` dan `relative`, dua nilai penting lainnya adalah `absolute` dan `fixed`.
+
+   Absolute Position
+   -----------------
+   - Elemen `absolute` keluar dari alur normal dokumen.
+   - Diposisikan relatif terhadap parent terdekat yang memiliki posisi `non-static`.
+   - Jika tidak ada, maka relatif terhadap `<html>` atau viewport.
+   - Gunakan `top`, `left`, `bottom`, `right` untuk mengatur posisinya.
+   - Memengaruhi layout elemen lain (ruang sebelumnya diabaikan).
+
+   Contoh:
+   - Jika parent memiliki `position: relative`, elemen `absolute` akan mengikuti batas parent.
+   - Jika tidak, elemen akan berada relatif ke viewport.
+
+   Catatan:
+   - Tambahkan `position: relative` pada parent agar elemen `absolute` tetap berada di dalamnya.
+
+   Fixed Position
+   --------------
+   - Elemen `fixed` juga keluar dari alur dokumen.
+   - Selalu relatif terhadap viewport, bukan parent.
+   - Tetap di posisinya meskipun halaman di-scroll.
+   - Atur posisi dengan `top`, `left`, `bottom`, `right`.
+
+   Contoh Penggunaan:
+   - Navbar tetap di atas halaman.
+   - Tombol/panel yang selalu terlihat saat scroll.
+
+   Catatan:
+   - Cocok untuk elemen seperti header, tombol “back to top”, atau notifikasi.
+   - Sering dikombinasikan dengan `width: 100%` dan `height` tertentu.
+*/
+
+.container {
+  margin-top: 150px;
+  width: 500px;
+  height: 700px;
+  border: 3px solid black;
+  position: relative;
+}
+
+.empat {
+  background-color: antiquewhite;
+}
+
+.lima {
+  background-color: rgb(92, 225, 65);
+  position: absolute;
+  top: 50;
+  right: 0;
+}
+
+.enam {
+  background-color: rebeccapurple;
+}
+
+.fixed {
+  height: 40px;
+  width: auto;
+  background-color: cadetblue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}

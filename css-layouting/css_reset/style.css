@@ -1,0 +1,86 @@
+/* ============================
+   CSS Reset
+   ============================ 
+   CSS Reset adalah teknik untuk menghapus nilai-nilai default dari elemen HTML,
+   terutama margin dan padding yang secara bawaan diberikan oleh browser.
+
+   Tujuan utama dari CSS Reset:
+   - Menghindari perbedaan tampilan antar browser
+   - Memberikan kontrol penuh terhadap styling dari awal
+
+   Tanpa reset, elemen seperti <body>, <h1>, dan <p> bisa memiliki margin/padding
+   default yang bervariasi antar browser.
+*/
+
+/* ============================
+   Contoh Kasus: Tanpa CSS Reset
+   ============================ 
+*/
+div {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+}
+
+/* 
+   Saat dijalankan, elemen <div> terlihat memiliki jarak dari tepi atas dan kiri
+   meskipun kita tidak memberi margin. Penyebabnya ialah elemen <body> memiliki 
+   margin bawaan dari browser.
+
+   Solusi manual:
+*/
+body {
+  margin: 0;
+}
+
+/* ============================
+   Reset untuk Banyak Elemen
+   ============================ 
+   Selain <body>, elemen seperti <h1>, <p>, <ul>, <blockquote> juga punya margin/padding
+   default. Menghapusnya satu per satu seperti ini tidak efisien:
+*/
+body,
+h1,
+p {
+  margin: 0;
+}
+
+/* ============================
+   Universal Selector
+   ============================ 
+   Solusi yang lebih praktis yaitu menggunakan selector universal `*` untuk reset semua elemen.
+   Kelebihan:
+   - Praktis dan cepat
+   Kekurangan:
+   - Menyasar semua elemen, termasuk elemen yang mungkin tidak butuh reset
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================
+   Eric Meyer’s CSS Reset
+   ============================ 
+   Alternatif yang lebih optimal dan terkenal yaitu css reset dari Eric Meyer.
+
+   Cara menggunakan:
+   1. Cari di Google: Eric Meyer CSS reset
+   2. Buka situs: https://meyerweb.com
+   3. Salin kode css reset yang tersedia
+   4. Tempel di bagian atas file CSS
+
+   Reset ini mencakup elemen-elemen lama dan baru (HTML5) agar semuanya
+   mulai dari kondisi nol.
+*/
+
+/* ============================
+   Kesimpulan
+   ============================ 
+   - Browser memiliki nilai default pada elemen HTML
+   - Nilai ini bisa mengganggu layout jika tidak di-reset
+   - Ada beberapa cara melakukan reset:
+     1. Manual → tidak praktis
+     2. Universal selector (*) → cepat tapi berat
+     3. Eric Meyer CSS Reset → cara paling optimal dan banyak digunakan
+*/

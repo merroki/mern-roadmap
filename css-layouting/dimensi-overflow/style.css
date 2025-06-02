@@ -1,0 +1,53 @@
+/* ============================
+   Dimensi CSS
+   ============================ 
+   Merupakan properti yang menentukan ukuran lebar (width) dan tinggi (height) 
+   suatu elemen HTML dalam CSS. Dimensi digunakan untuk mengatur ruang yang 
+   ditempati elemen di halaman web.
+   
+   Satuan untuk properti width dan height dibagi menjadi dua kategori:
+   1. Absolute units
+      Seperti px (pixel), cm (centimeter), mm (millimeter), 
+      in (inch), pt (point), dan pc (pica).
+      Nilainya tetap dan tidak bergantung pada ukuran elemen lainnya.
+   2. Relative units
+      Seperti % (persen).
+      Nilainya relatif terhadap elemen induknya (parent).
+*/
+.px {
+  width: 200px;
+  height: 200px;
+  background-color: lightgreen;
+}
+
+.satu {
+  width: 150px;
+  height: 150px;
+  background-color: pink;
+}
+
+.dua {
+  width: 80%;
+  background-color: lightblue;
+}
+
+/* ============================
+   Overflow CSS
+   ============================ 
+   Merupakan properti yang menentukan apa yang terjadi dengan konten elemen 
+   jika konten tersebut lebih besar daripada area yang tersedia untuknya.
+   
+   Nilai-nilai pada properti overflow:
+   1. visible (default)
+      Konten yang melebihi ukuran akan tetap ditampilkan di luar kotaknya.
+   2. auto
+      Scroll akan muncul otomatis jika konten melebihi ukuran.
+      Kalau konten sedikit, scroll akan hilang.
+   3. hidden
+      Konten yang melebihi ukuran akan disembunyikan dan tidak bisa diakses.
+   4. scroll
+      Scroll akan selalu muncul, meskipun kontennya melebihi ukuran parent-nya.
+*/
+.satu {
+  overflow: scroll;
+}

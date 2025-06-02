@@ -1,0 +1,96 @@
+/* ============================
+   Masalah Float: Runtuhnya Kontainer
+   ============================
+   Saat elemen di dalam sebuah kontainer menggunakan properti float, 
+   kontainer dapat mengalami "runtuh" karena tidak menghitung tinggi elemen yang difloat.
+
+   Solusi:
+   1. Menambahkan properti overflow: auto pada kontainer
+   2. Menambahkan elemen kosong dengan properti clear
+   3. Menggunakan teknik clearfix (paling direkomendasikan)
+*/
+
+/* ============================
+   Solusi 1: overflow: auto
+   ============================
+   Menambahkan properti overflow: auto akan membuat kontainer 
+   secara otomatis menghitung tinggi dari elemen-elemen di dalamnya, 
+   termasuk elemen yang difloat.
+
+   Merupakan solusi praktis meskipun hanya bersifat sementara (workaround).
+*/
+.container {
+  width: 600px;
+  background-color: antiquewhite;
+  overflow: auto;
+  margin: 30px auto;
+}
+
+.container img {
+  width: 300px;
+  height: 300px;
+  float: left;
+}
+
+/* ============================
+   Solusi 2: Elemen Clear
+   ============================
+   Menambahkan elemen kosong setelah seluruh elemen yang difloat, 
+   lalu memberikan properti clear pada elemen tersebut.
+
+   Gunakan:
+   - clear: left   → jika elemen menggunakan float: left
+   - clear: right  → jika elemen menggunakan float: right
+   - clear: both   → jika kedua jenis float digunakan
+*/
+.container2 {
+  width: 800px;
+  margin: 0 auto;
+  background-color: aquamarine;
+}
+
+.container2 img {
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin-right: 20px;
+}
+
+.container2 .clear {
+  clear: left;
+}
+
+/* ============================
+   Solusi 3: Micro Clearfix
+   ============================
+   Teknik clearfix modern yang tidak memerlukan elemen <div> tambahan.
+   Menggunakan pseudo-element ::before dan ::after untuk membersihkan float.
+
+   Teknik ini diperkenalkan oleh Nicolas Gallagher.
+*/
+.cf::before,
+.cf::after {
+  content: " ";
+  display: table;
+}
+
+.cf::after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1; /* Untuk kompatibilitas dengan IE6/7 */
+}
+
+.container3 {
+  width: 600px;
+  background-color: violet;
+  margin: 20px auto;
+}
+
+.container3 img {
+  width: 300px;
+  height: 300px;
+  margin-left: 30px;
+  float: right;
+}
