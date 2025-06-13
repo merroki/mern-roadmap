@@ -1,0 +1,53 @@
+/* ============================
+   Pengenalan CSS3
+   ============================ 
+   CSS3 adalah versi ketiga dari CSS yang dikembangkan oleh W3C. 
+   Merupakan lanjutan dari versi sebelumnya dengan fitur baru dan lebih fleksibel dalam 
+   desain web.
+
+   CSS3 tidak menggantikan CSS1 atau CSS2, melainkan memperluasnya. 
+   Sintaks CSS lama tetap bisa digunakan.
+
+   ============================
+   Perbedaan CSS1, CSS2, dan CSS3
+   ============================ 
+   - CSS1: Properti dasar seperti `font`, `background`, `color`.
+   - CSS2: Menambahkan box model, selector lanjutan, dan layout berbasis tabel.
+   - CSS3: Dibagi dalam modul, seperti:
+     - Color Module: Lebih banyak pilihan warna.
+     - Border Module: Properti seperti `border-radius`.
+     - Modul lain: Backgrounds and Borders, Text Effects, Transformations, Animations, dll.
+
+   Catatan:
+   - Pendekatan modular memudahkan pengembangan fitur secara terpisah.
+   - Tetap kompatibel dengan versi sebelumnya.
+
+   ============================
+   Alasan Menggunakan CSS3
+   ============================ 
+   - Lebih fleksibel & interaktif: Efek visual dan layout kompleks tanpa JavaScript/Flash.
+   - Efisien untuk mockup: Prototipe desain bisa dibuat hanya dengan CSS.
+   - Minim gambar: Efek seperti sudut tumpul dan bayangan cukup dengan CSS.
+
+   ============================
+   Fitur Populer CSS3
+   ============================ 
+   - `border-radius`: Sudut tumpul.
+   - `opacity`: Transparansi.
+   - `box-shadow`: Bayangan elemen.
+   - `transition`: Transisi halus.
+   - `animation`: Animasi tanpa JavaScript.
+
+   Catatan:
+   - Lihat referensi resmi seperti W3C atau MDN untuk daftar lengkap.
+
+   ============================
+   Dukungan Browser & Prefix
+   ============================ 
+   - Tidak semua browser mendukung semua fitur CSS3.
+   - Beberapa butuh vendor prefix:
+     - `-webkit-`: Chrome, Safari
+     - `-moz-`: Firefox
+     - `-o-`: Opera
+     - `-ms-`: IE
+*/

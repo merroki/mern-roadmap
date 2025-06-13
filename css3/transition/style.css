@@ -1,0 +1,99 @@
+/* ============================  
+   CSS Transitions  
+   ============================  
+   Properti untuk mengubah nilai properti CSS secara halus  
+   antara dua keadaan (state) dengan durasi tertentu  
+
+   Catatan:
+   - Hanya bekerja antara dua state (awal dan akhir)
+   - Tidak mendukung intermediate keyframes seperti animation
+   - Lebih performa daripada JavaScript animations
+   - Bisa dikombinasikan dengan transform
+
+   Parameter properti transition:
+   1. property (opsional)  : Properti yang ingin ditransisikan (default: all)
+   2. duration (wajib)     : Lama transisi (s/ms) contoh: 0.5s, 200ms
+   3. timing-function (ops): Fungsi percepatan (default:ease, linear, etc.)
+   4. delay (opsional)     : Tunggu sebelum transisi dimulai
+*/
+
+/* ========================
+   PROPERTI YANG BISA DITRANSISI
+   ========================
+   Bisa:
+   - transform, opacity
+   - color, background-color
+   - width/height, margin/padding
+   - font-size, letter-spacing
+   - border, box-shadow
+   - dan banyak properti numerik lainnya
+   
+   Tidak bisa:
+   - font-family
+   - display (none/block/inline)
+   - position (static/relative/absolute)
+*/
+
+/* Contoh Dasar */
+.container1 {
+  border: 5px solid black;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  background: salmon;
+}
+
+.box1 {
+  transition: transform 1s; /* Hanya animasi transform */
+}
+
+.box2 {
+  transition: all 1s; /* Semua properti dianimasikan */
+}
+
+.container1:hover .box1 {
+  transform: rotate(180deg);
+  margin-left: 899px; /* Perubahan instan */
+  background: royalblue; /* Perubahan instan */
+}
+
+.container1:hover .box2 {
+  transform: rotate(180deg);
+  margin-left: 899px;
+  background: royalblue;
+}
+
+/* ============================  
+   CSS Transition Timing & Delay  
+   ============================  
+   Kontrol percepatan animasi dan penundaan eksekusi transisi  
+
+   Catatan:
+   - Timing function mengatur "rasa" pergerakan
+   - Delay membuat animasi mulai setelah waktu tertentu
+   - Bisa dikombinasikan untuk efek bertahap
+*/
+
+/* ========================
+   TIMING FUNCTIONS
+   ======================== 
+   1. ease (default)        : Mulai lambat, percepat, lalu melambat
+   2. ease-in               : Mulai lambat, akhir cepat
+   3. ease-out              : Mulai cepat, akhir lambat
+   4. ease-in-out           : Mulai dan akhir lambat
+   5. linear                : Kecepatan konstan
+   6. cubic-bezier(n,n,n,n) : Kurva kustom (paling fleksibel)
+*/
+.ease-in {
+  transition: all 1s ease-in;
+}
+
+.cubic-bezier {
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.staggered {
+  transition: transform 1s ease 3s, background-color 0.3s linear 1.2s;
+}

@@ -1,0 +1,55 @@
+/* ============================  
+   Radial Gradient pada CSS3  
+   ============================  
+   Teknik untuk membuat gradasi warna melingkar/elips.  
+   Diterapkan sebagai nilai `background-image` dengan sintaks:  
+   `radial-gradient(shape size at position, color1 stop%, color2 stop%, ...)`
+
+   Parameter Utama:
+   1. Shape: 
+   - ellipse (default)
+   - circle
+   
+   2. Size:
+   - closest-side
+   - farthest-side  
+   - closest-corner
+   - farthest-corner
+   - [panjang] [lebar] (e.g., 200px 100px)
+   
+   3. Position:
+   - at [posisi y (top, center, bottom)] [posisi x(left, center, right)]
+*/
+
+.radial-basic {
+  width: 600px;
+  height: 300px;
+  margin-bottom: 60px;
+
+  /* Contoh dasar yaitu dua warna (elips default) */
+  background-image: radial-gradient(red, blue);
+}
+
+/* 
+   Variasi Penggunaan:
+   1. Bentuk lingkaran (circle) 
+*/
+.radial-circle {
+  background-image: radial-gradient(circle, red 50%, blue 100%);
+}
+
+/* 2. Atur jangkauan gradasi  */
+.radial-closest-side {
+  background-image: radial-gradient(circle closest-side, red, blue);
+}
+
+/* 3. Posisi custom + multi warna  */
+.radial-complex {
+  background-image: radial-gradient(
+    ellipse at top right,
+    red 10%,
+    yellow 30%,
+    green 60%,
+    purple 80%
+  );
+}

@@ -1,0 +1,75 @@
+/* ============================  
+   CSS Filter Effects  
+   ============================  
+   Properti untuk memberikan efek visual seperti Photoshop/Instagram  
+   pada elemen HTML (gambar, background, dll) menggunakan CSS murni.  
+
+   Catatan:
+   - Membutuhkan vendor prefix (-webkit-) untuk Chrome/Safari
+   - Dapat dikombinasikan multiple filter
+   - Mendukung transisi/animation
+   - Lebih performa daripada manipulasi gambar manual
+*/
+
+/* Contoh Dasar Filter */
+img {
+  width: 300px;
+  -webkit-filter: blur(5px) grayscale(100%); /* Prefix untuk Chrome/Safari */
+  filter: blur(5px) grayscale(100%);
+  transition: filter 0.5s ease; /* Animasi transisi */
+}
+
+img:hover {
+  filter: none; /* Reset saat hover */
+}
+
+/* ========================
+   JENIS FILTER & NILAI
+   ======================== 
+   1. blur(radius)          : 0px (default) hingga tak terbatas
+   2. brightness(n)         : 0-1 (default) atau 0%-100%
+   3. contrast(n)           : 1/100% (default), >1 meningkatkan kontras
+   4. grayscale(n)          : 0-1 atau 0%-100%
+   5. sepia(n)              : 0-1 atau 0%-100% (efek vintage)
+   6. hue-rotate(deg)       : 0-360 derajat (perputaran roda warna)
+   7. invert(n)             : 0-1 atau 0%-100% (efek negatif film)
+   8. opacity(n)            : 0-1 atau 0%-100% (alternatif properti opacity)
+   9. drop-shadow()         : x y blur color (lebih canggih dari box-shadow)
+   10. saturate(n)          : 0-1 atau 0%-100% (intensitas warna)
+*/
+
+/* ========================
+   CONTOH IMPLEMENTASI
+   ======================== */
+/* Efek Instagram-like */
+.instagram-filter {
+  filter: contrast(1.2) saturate(1.5) hue-rotate(15deg);
+}
+
+/* Efek thumbnail disabled */
+.disabled-thumbnail {
+  filter: grayscale(1) opacity(0.7);
+}
+
+/* Efek spotlight */
+.highlight {
+  filter: brightness(1.3) drop-shadow(0 0 10px yellow);
+}
+
+/* ========================
+   BEST PRACTICES
+   ======================== 
+   1. SELALU sertakan vendor prefix:
+      -webkit-filter (Chrome/Safari)
+      filter (standar)
+   2. Untuk performa optimal:
+    - Gunakan pada elemen tertentu, bukan seluruh halaman
+    - Hindari animasi filter kompleks di mobile
+   3. Tools bantu:
+    - cssfilters.co (editor visual)
+    - caniuse.com (cek kompatibilitas)
+   4. Kombinasi kreatif:
+    - filter + transform untuk efek 3D
+    - filter + blend-mode untuk compositing
+    - filter + animation untuk interaksi dinamis
+*/

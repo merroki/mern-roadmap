@@ -1,0 +1,37 @@
+/* ============================  
+   RGBA & HSLA pada CSS3  
+   ============================  
+   RGBA dan HSLA adalah format warna CSS3 yang mendukung transparansi (alpha channel).  
+   - RGBA: Red, Green, Blue + Alpha (0-1)  
+   - HSLA: Hue (0-360), Saturation (0-100%), Lightness (0-100%) + Alpha  
+   Berguna ketika ingin memberi transparansi pada warna TANPA mempengaruhi elemen child.  
+
+   Nilai alpha 0 = transparan penuh. Nilai alpha 1 = solid. 
+   Hanya mempengaruhi warna, bukan elemen
+*/
+.parent {
+  background-color: rgba(255, 102, 0, 0.5); /* Orange 50% transparan */
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.child {
+  background-color: hsl(242, 100%, 63%); /* Solid HSL tanpa transparansi */
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: -50px;
+  bottom: -50px;
+}
+
+/*
+Perbandingan:
+- opacity: mempengaruhi seluruh elemen + child
+- rgba/hsla: hanya mempengaruhi warna elemen tersebut
+
+Catatan:
+- Nilai Hue (HSL) dalam derajat (0-360)
+- Saturation/Lightness dalam persen
+- Nilai Alpha sama di RGBA/HSLA (0-1)
+*/

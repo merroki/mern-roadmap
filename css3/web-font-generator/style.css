@@ -1,0 +1,47 @@
+/* ============================  
+   Web Font dengan @font-face  
+   ============================  
+   Cara implementasi custom font di website menggunakan @font-face.  
+   Mendemonstrasikan penggunaan font dari Font Squirrel dan konversi format font.  
+
+   Catatan:
+   - Format WOFF (Web Open Font Format) direkomendasikan untuk performa terbaik
+   - Beberapa font menyediakan CSS @font-face generator otomatis
+   - Font berlisensi web ditandai dengan ikon globe hitam
+   - Konversi format TTF/OTF ke WOFF bisa menggunakan generator online
+*/
+
+/* Contoh implementasi font Open Sans */
+@font-face {
+  font-family: "Open Sans";
+  src: url("opensans.woff") format("woff"); /* Hanya perlu WOFF untuk modern browser */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Contoh implementasi font Alex Brush setelah konversi */
+@font-face {
+  font-family: "Alex Brush";
+  src: url("alexbrush-regular-webfont.woff") format("woff"); /* Hasil konversi dari TTF */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Alex Brush", cursive;
+}
+
+/* ========================
+   PROSES KONVERSI FONT
+   ======================== */
+/*
+   1. Kunjungi Font Squirrel Webfont Generator
+   2. Upload font TTF/OTF
+   3. Pilih preset 'Optimal'
+   4. Pastikan ikon globe berwarna hitam (lisensi web)
+   5. Download webfont kit
+   6. Ekstrak dan copy file WOFF
+   7. Gunakan CSS generator yang disediakan
+*/

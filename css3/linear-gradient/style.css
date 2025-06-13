@@ -1,0 +1,59 @@
+/* ============================  
+   Linear Gradient pada CSS3  
+   ============================  
+   Teknik untuk membuat gradasi warna linear pada elemen.  
+   Diterapkan sebagai nilai `background-image` atau `background` dengan sintaks:  
+   `linear-gradient(arah/sudut, warna1 stop%, warna2 stop%, ...)`
+
+   Best Practice:
+   1. Gunakan minimal 2 warna
+   2. Untuk transisi halus, gunakan warna analog (hue berdekatan)
+   3. Color stop ideal 10-30% range
+   4. Kombinasikan dengan background-color fallback
+
+   Analog Photoshop → CSS:
+   - Gradient Overlay → background-image: linear-gradient()
+   - Angle           → deg/to [direction]
+   - Color Stops     → warna persentase (red 50%)
+   - Opacity         → rgba/hsla
+*/
+
+.gradient-basic {
+  width: 600px;
+  height: 300px;
+  margin-bottom: 50px;
+
+  /* Contoh dasar: dua warna vertikal */
+  background: linear-gradient(red, green);
+}
+
+/* 
+Variasi Penggunaan:
+1. Multi-warna dengan color stops */
+.gradient-multicolor {
+  background-image: linear-gradient(to right, red 63%, #f0d606 70%, green 80%);
+}
+
+/* 2. Gradient diagonal dengan sudut  */
+.gradient-diagonal {
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 1),
+    rgba(0, 255, 0, 1)
+  );
+}
+
+/* 3. Gradient dengan keyword arah  */
+.gradient-direction {
+  background-image: linear-gradient(to bottom right, #ff0000, #00ff00);
+}
+
+.gradient-fallback {
+  background-color: salmon; /* Fallback */
+  background-image: linear-gradient(
+    to right,
+    transparent 20%,
+    rgba(255, 255, 255, 0.5) 50%,
+    transparent 80%
+  );
+}

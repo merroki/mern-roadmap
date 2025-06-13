@@ -1,0 +1,34 @@
+/* ============================  
+   CSS Transform  
+   ============================  
+   Properti untuk memanipulasi visual elemen HTML dalam 2D/3D  
+   Menggunakan hardware acceleration untuk performa optimal  
+
+   Catatan:
+   - Membutuhkan vendor prefix (-webkit-, -moz-) untuk browser lama
+   - Tidak mempengaruhi flow dokumen (berbeda dengan margin)
+   - Dapat dikombinasikan multiple transform
+   - Bisa di-animasikan dengan transition/keyframes
+*/
+
+/* ========================
+   FUNGSI TRANSFORM 2D
+   ======================== 
+   1. scale(x, y)     | scaleX() / scaleY()         : Memperbesar/mengecil (default 1)
+   2. rotate(deg)     | rotateX() / rotateY()       : Memutar elemen (0-360deg)
+   3. skew(x, y)      | skewX() / skewY()           : Miringkan elemen (deg)
+   4. translate(x, y) | translateX() / translateY() : Menggeser posisi (px/em/%)
+*/
+
+/* Contoh Dasar */
+.element {
+  width: 200px;
+  height: 200px;
+  margin: 150px auto;
+  background-color: orangered;
+  transition: transform 0.3s ease; /* Animasi transisi */
+}
+
+.element:hover {
+  transform: scale(1.5) rotate(45deg);
+}

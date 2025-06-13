@@ -1,0 +1,100 @@
+/* ============================  
+   CSS Animations  
+   ============================  
+   Sistem animasi berbasis keyframe yang lebih powerful daripada transition  
+   Memungkinkan multiple states dan kontrol lebih detail.
+
+   Catatan:
+   - Membutuhkan @keyframes definition
+   - Bekerja tanpa trigger (berbeda dengan transition)
+   - Mendukung infinite loops
+   - Bisa dikontrol via JavaScript
+*/
+
+/* ========================
+   SYNTAX DASAR
+   ======================== 
+   Sintaks untuk membuat keyframes:
+   @keyframes nama-animasi {      @keyframes nama-animasi {
+      0% {  }                         from: {}
+      50% { }                         to: {}
+      100% { }                    }
+   } 
+
+   Sintaks dasar animation: 
+   animation: nama-animasi duration timing-function delay 
+              iteration-count direction fill-mode play-state;
+  
+   Penjelasan masing-masing value dari properti animation: 
+   1. animation-name            : Nama keyframes (wajib)
+   2. animation-duration        : Lama animasi (s/ms)
+   3. animation-timing-function : Kurva percepatan (ease, linear, cubic-bezier)
+   4. animation-delay           : Tunggu sebelum mulai (s/ms)
+   5. animation-iteration-count : Jumlah pengulangan (number/infinite)
+   6. animation-direction       : normal/reverse/alternate/alternate-reverse
+   7. animation-fill-mode       : none/forwards/backwards/both
+   8. animation-play-state      : running/paused
+
+   ========================
+   DETAIL PROPERTI
+   ========================
+   animation-direction 
+   - normal             : 0% → 100%
+   - reverse            : 100% → 0%
+   - alternate          : 0%→100%→0%→100%...
+   - alternate-reverse  : 100%→0%→100%→0%...
+   
+   animation-fill-mode
+   - none        : Kembali ke style awal (default)
+   - forwards    : Tetap di style akhir (100%)
+   - backwards   : Langsung pakai style awal (0%) selama delay
+   - both        : Kombinasi forwards + backwards
+
+   animation-play-state
+   - running     : Animasi berjalan (default)
+   - paused      : Animasi berhenti (bisa dikontrol JS)
+*/
+
+/* ========================
+   CONTOH Dasar
+   ======================== */
+/* Contoh 1: Animasi sederhana */
+@keyframes grow {
+  from {
+    width: 200px;
+  }
+  to {
+    width: 500px;
+  }
+}
+
+.box {
+  margin-bottom: 30px;
+  background-color: salmon;
+  width: 200px;
+  height: 200px;
+}
+
+.box1 {
+  animation: grow 2s 3 forwards;
+}
+
+.box2 {
+  animation: complex-animation 2s alternate infinite;
+}
+
+/* Contoh 2: Multi-step animasi */
+@keyframes complex-animation {
+  0% {
+    transform: scale(1);
+    background: salmon;
+  }
+  50% {
+    transform: scale(1.5) translateX(200px);
+    background: royalblue;
+  }
+  100% {
+    transform: scale(1) translateX(400px);
+    background: gold;
+  }
+}

@@ -1,0 +1,25 @@
+/* ============================  
+   Text Shadow pada CSS3  
+   ============================  
+   `text-shadow` adalah properti untuk menambahkan bayangan pada teks.  
+   Lebih sederhana dari box-shadow tanpa fitur inset/spread.  
+   Sangat efektif untuk efek teks 3D, glow, atau dekorasi.  
+
+   Catatan:
+   - Multiple shadow dipisahkan koma
+   - Warna transparan (rgba) untuk efek lebih halus
+*/
+
+.text-shadow-example {
+  font-size: 100px;
+  font-family: Arial;
+  text-align: center;
+  color: white;
+
+  /* 
+  Sintaks dasar.
+  text-shadow: offset-x | offset-y | blur-radius | color 
+  */
+  text-shadow: 0 2px 1px black, /* Efek 3D dasar */ 5px 5px 10px green,
+    /* Bayangan kanan bawah */ -5px -5px 10px red; /* Bayangan kiri atas */
+}

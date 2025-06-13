@@ -1,0 +1,78 @@
+/* ============================
+   @font-face dalam CSS3
+   ============================
+   Teknik untuk menggunakan font kustom di website tanpa tergantung::
+   1. Font sistem lokal pengguna
+   2. Layanan eksternal seperti Google Fonts
+   Memberikan kontrol penuh terhadap tipografi sambil tetap menjaga performa.
+*/
+
+/* Implementasi Dasar */
+@font-face {
+  font-family: "AlexBrush"; /* Nama font kustom */
+  src: url("AlexBrush-Regular.ttf") format("truetype");
+  /*
+  Format file:
+   - .ttf/.otf (TrueType/OpenType) - Dukungan paling luas
+   - .woff (Web Open Font Format) - Dioptimalkan untuk web
+   - .eot (Embedded OpenType) - Untuk Internet Explorer versi lama
+  */
+}
+
+h1 {
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 120px;
+
+  font-family: "AlexBrush", Arial, cursive;
+  /* Rantai fallback: Kustom → Arial → Generic cursive */
+}
+
+/*
+Praktik Terbaik:
+1. Selalu host file font di server Anda sendiri
+2. Sertakan beberapa format untuk dukungan lintas browser:
+*/
+@font-face {
+  font-family: "ModernFont";
+  src: url("modern.woff2") format("woff2"), url("modern.woff") format("woff"),
+    url("modern.ttf") format("truetype");
+  /*
+  Urutan yang direkomendasikan:
+   - woff2 (untuk browser modern)
+   - woff (untuk sebagian besar browser)
+   - ttf/otf (sebagai cadangan)
+  */
+}
+
+/*
+Lisensi Font:
+- Gunakan hanya font dengan lisensi web yang sah
+- Sumber gratis:
+  1. Google Fonts (fonts.google.com)
+  2. Font Squirrel (fontsquirrel.com)
+  3. Adobe Fonts (fonts.adobe.com)
+- Selalu periksa ikon lisensi:
+  🖥️ Untuk penggunaan desktop
+  🌐 Untuk penggunaan web (@font-face)
+  📱 Untuk aplikasi mobile
+  📚 Untuk ebook/PDF
+*/
+
+/*
+Tips Performa:
+1. Lebih utamakan WOFF/WOFF2 daripada TTF karena ukuran file yang lebih kecil
+2. Gunakan font-display: swap; untuk menghindari FOIT (Flash of Invisible Text)
+3. Subset font jika memungkinkan (gunakan alat seperti glyphhanger)
+*/
+@font-face {
+  font-family: "OptimizedFont";
+  src: url("optimized.woff2") format("woff2");
+  font-display: swap; /* Menampilkan font fallback hingga font utama dimuat */
+}
+
+/* Masalah Umum:
+- Error 404: Periksa kembali jalur file
+- CORS: Pastikan font dilayani dari domain/CDN yang sama
+- FOUT: Atasi dengan font-display atau transisi CSS
+*/

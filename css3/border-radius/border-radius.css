@@ -1,0 +1,55 @@
+/* ============================
+   Border Radius pada CSS3
+   ============================
+   `border-radius` adalah properti CSS3 untuk membuat sudut elemen membulat.
+   Semakin besar nilainya, semakin melengkung sudutnya.
+   Bisa digunakan untuk membentuk lingkaran, elips, atau kapsul.
+*/
+.border-radius {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+  text-align: center;
+  line-height: 200px;
+  /* 
+  Penggunaan Dasar:
+   - `border-radius: 10px;` → Semua sudut melengkung 10px.
+   - `border-radius: 50%;` → Membentuk lingkaran jika elemen kotak.
+   - Untuk lingkaran, gunakan `border-radius: 50%` pada elemen bujur sangkar.
+   - Untuk elips, cukup atur lebar ≠ tinggi.
+  */
+  border-radius: 10px;
+  border-radius: 50%;
+}
+
+.border-radius1 {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+  margin-top: 30px;
+  text-align: center;
+  line-height: 200px;
+  /* 
+  Radius pada Sisi Tertentu:
+  Gunakan:
+    - `border-top-left-radius`
+    - `border-top-right-radius`
+    - `border-bottom-right-radius`
+    - `border-bottom-left-radius`
+  */
+  border-top-right-radius: 50%;
+}
+
+.border-radius2 {
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+  background-color: salmon;
+  text-align: center;
+  line-height: 200px;
+  /* 
+  Notasi Singkat (Shorthand):
+  Maks. 4 nilai: top-left, top-right, bottom-right, bottom-left.
+  */
+  border-radius: 0 0 0 30%;
+}

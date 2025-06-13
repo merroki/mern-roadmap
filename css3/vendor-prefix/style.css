@@ -1,0 +1,40 @@
+/* ============================  
+   CSS Vendor Prefixes  
+   ============================  
+   Teknik untuk memastikan kompatibilitas properti CSS3 di berbagai versi browser  
+   dengan menambahkan awalan spesifik vendor sebelum properti CSS.  
+
+   Catatan:
+   - Prefix utama yaitu -webkit- (Chrome/Safari), -moz- (Firefox), -ms- (IE), -o- (Opera lama)
+   - Tidak semua properti membutuhkan prefix (cek kompatibilitas browser terbaru)
+   - Beberapa properti seperti filter masih memerlukan prefix di browser tertentu
+   - Tools otomatisasi seperti Autoprefixer, caniuse.com, shouldiprefix.com
+*/
+
+/* Contoh implementasi filter dengan prefix */
+img {
+  -webkit-filter: grayscale(100%); /* Chrome/Safari/Opera */
+  filter: grayscale(100%); /* Standar */
+}
+
+/* ========================
+   BEST PRACTICES
+   ======================== 
+   1. SELALU tulis properti standar TERAKHIR:
+   .element {
+     -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+          -o-transform: scale(1);
+             transform: scale(1);
+   }
+
+   2. Gunakan tools otomatisasi:
+   - Autoprefixer (plugin code editor)
+   - PostCSS
+   - Online tools seperti pleeease.io
+   
+   3. Cek kompatibilitas di:
+   - caniuse.com
+   - shouldiprefix.com
+   - browserstack.com (testing langsung)
+*/
