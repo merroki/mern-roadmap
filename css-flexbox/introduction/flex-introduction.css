@@ -1,0 +1,58 @@
+/* ============================  
+   CSS Flexbox  
+   ============================  
+   Model layout 1-dimensi untuk mengatur tata letak,
+   distribusi ruang, dan alignment elemen dalam container.
+
+   Fitur Utama:
+   - Membuat layout fleksibel tanpa float atau positioning
+   - Responsif secara alami
+   - Didukung semua browser modern (IE10+ dengan prefix)
+   - Mengontrol alignment, arah, urutan, dan ukuran elemen
+*/
+
+/* ========================
+   FLEX CONTAINER PROPERTIES
+   ========================
+   .container {
+    display: flex; || atau inline-flex 
+    flex-direction: row | row-reverse | column | column-reverse;
+    flex-wrap: nowrap | wrap | wrap-reverse;
+    justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+    align-items: stretch | flex-start | flex-end | center | baseline;
+    align-content: flex-start | flex-end | center | space-between | space-around | space-evenly | stretch;
+  }
+*/
+
+/* ========================
+   FLEX ITEM PROPERTIES
+   ========================
+   .item {
+    order: <integer>; Urutan relatif (default 0)
+    flex-grow: <number>; Faktor pertumbuhan (default 0)
+    flex-shrink: <number>; Faktor penyusutan (default 1)
+    flex-basis: <length> | auto; Ukuran dasar (default auto)
+    flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];
+    align-self: auto | flex-start | flex-end | center | baseline | stretch;
+  }
+*/
+
+/* ========================
+   KONSEP DASAR
+   ========================
+   1. Dua sumbu:
+      - Main axis (arah flex-direction)
+        Default flex-direction: row; maka main axis adalah horizontal
+        Jika flex-direction: column; maka main axis adalah vertikal
+      - Cross axis (tegak lurus main axis)
+        Default flex-direction: row; maka cross axis adalah vertikal
+        Jika flex-direction: column; makan cross axis adalah horizontal
+
+   2. Container vs Items:
+      - Container merupakan elemen pembungkus atau parent dengan (display: flex)
+      - Items merupakan elemen langsung di dalam container
+
+   3. Ukuran:
+      - Main size merupakan width/height sepanjang main axis
+      - Cross size merupakan width/height sepanjang cross axis
+*/
