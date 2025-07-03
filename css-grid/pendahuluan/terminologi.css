@@ -1,0 +1,60 @@
+/* ============================  
+   CSS Grid Terminology  
+   ============================  
+   Istilah-istilah penting dalam CSS Grid Layout
+*/
+
+/* ========================
+   KONSEP DASAR
+   ======================== */
+/*
+1. Grid Container
+   - Elemen pembungkus yang diberi `display: grid`
+   - Menjadi parent untuk grid items
+
+2. Grid Item
+   - Anak langsung (direct children) dari grid container
+   - Bisa diatur posisi dan ukurannya dalam grid
+*/
+
+/* ========================
+   STRUKTUR GRID
+   ======================== */
+/*
+3. Grid Line
+   - Garis pembatas (horizontal/vertikal) yang membentuk grid
+   - Diberi nomor (1, 2, 3...) atau nama custom
+   - Contoh: 
+     ┌───┬───┐
+     │   │   │  ← Line 1, 2, 3 (vertical)
+     ├───┼───┤
+     │   │   │  ← Line 1, 2 (horizontal)
+     └───┴───┘
+
+4. Grid Cell
+   - Perpotongan antara 1 baris dan 1 kolom
+   - Unit terkecil dalam grid (seperti cell di Excel)
+
+5. Grid Area
+   - Kumpulan beberapa cell yang membentuk persegi panjang
+   - Diberi nama untuk referensi
+   - Contoh:
+     grid-template-areas: "header header"
+                          "sidebar main";
+*/
+
+/* ========================
+   UKURAN & SPASI
+   ======================== */
+/*
+6. Grid Track
+   - Ruang antara dua grid line yang berdekatan
+   - Bisa berupa baris (row track) atau kolom (column track)
+   - Diatur dengan:
+     grid-template-rows / grid-template-columns
+
+7. Grid Gap
+   - Jarak antar track (row-gap dan column-gap)
+   - Contoh: gap: 20px (row dan column) 
+              atau gap: 10px 20px (row column)
+*/
